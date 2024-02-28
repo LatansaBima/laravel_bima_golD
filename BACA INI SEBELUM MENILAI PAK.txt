@@ -1,0 +1,4 @@
+hosting github ini : latansabima.c1.is
+passing data : /belajar   /biodata
+request by url : /belajar/"isi terserah"   /biodata/"isi terserah"
+request by form : /pendaftaran
