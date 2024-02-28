@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BelajarController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/', function () {
-    return view('test');
-});
+
+Route::get('/belajar', [BelajarController::class, 'index']);
+Route::get('/biodata', [BelajarController::class, 'biodata']);
+
+Route::get('/belajar/{nama}', [BelajarController::class, 'getNama']);
+Route::get('/biodata/{nama}', [BelajarController::class, 'getNama']);
+
+Route::get('/pendaftaran', [BelajarController::class, 'pendaftaran']);
+Route::post('/pendaftaran/proses', [BelajarController::class, 'proses']);
